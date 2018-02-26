@@ -1,27 +1,45 @@
 package sef.ATestTask.FirstActivity;
 
+
 public class FirstActivity {
+    public static void main(String[] args, Employee[] employess){
 
-	public static void main(String[] args) {
+        Employee[] employees = new Employee [6];
+        employess [0] = new Employee("Janis", "Programmer", "TTT", 500);
+        employess [1] = new Employee("Janis", "Programmer", "TTT", 600);
+        employess [2] = new Employee("Janis", "Programmer", "TTT", 750);
+        employess [3] = new Employee("Janis", "Team Lead", "TTT", 1000);
+        employess [4] = new Employee("Janis", "Manager", "TTT", 2000);
+        employess [5] = new Employee("Janis", "Janitor", "TTT", 50);
 
-		//TODO 1 Create collection of employee (more than 5)
-		//		System.out.println() result
+        bubbleSort(employees);
 
-		//TODO 2 sort and this employees by salary (from min to max)
-		// TIP - google bubble sort
-		//		System.out.println() result
+        Employee JanisEmployee; JanisEmployee = (Employee) Janis;
 
-		//TODO 3 create instance of the Person ->
-		// than make them Student
-		// than make them Employee
-		//		System.out.println() result
-
-		//TODO 4 Create method for total change employee information
-		// for example some employee change his work
+        System.out.println("Array After Bubble Sort");
+        for (int i=0; i<employees.length; i++);
+        System.out.print(employees[i].getSalary()+"");
 
 
-	}
+    }
 
-	
-	
+    public void bubbleSort (Employee[] arr){
+        int n = arr.length;
+        double temp;
+        for (int i=0; i<n; i++){
+            for (int j=1; j<(n-1); j++){
+                if(arr[j-1].getSalary()>arr[j].getSalary()){
+
+                    temp=arr[j-1].getSalary();
+                    arr[j-1].setSalary(arr[j].getSalary());
+                    arr[j].setSalary(temp);
+                }
+            }
+        }
+
+    }
 }
+
+
+
+

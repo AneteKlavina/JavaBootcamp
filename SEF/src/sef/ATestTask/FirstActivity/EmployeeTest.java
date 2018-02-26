@@ -11,7 +11,20 @@ public class EmployeeTest {
     public void checkEmployeeCreatedProperly(){
         Employee employee = new Employee();
         employee.setFirstName("Test1");
-        assertEquals("I am an error message", "Test1", employee.getFirstName());
+        assertEquals("Message not OK", "Test1", employee.getFirstName());
+        assertEquals("Message not OK", "Manager", employee.getJobTitle());
     }
 
 }
+public class EmployeeTest {
+
+    public void checkEmployeeCreated(){
+        Employee employee = new Employee();
+        employee.setFirstName("TestName");
+        employee.setJobTitle("Manager");
+        assertEquals("Message", "TestName", employee.getFirstName());
+        assertEquals("Message", "Manager", employee.getSecondName());
+    }
+
+}
+
