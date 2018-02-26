@@ -10,18 +10,20 @@ public class EmployeeTest {
     @Test
     public void checkEmployeeCreatedProperly(){
         Employee employee = new Employee();
-        employee.setFirstName("Test1");
+        try {
+            employee.setFirstName("Test1");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println(employee.getJobTitle());
         assertEquals("Message not OK", "Test1", employee.getFirstName());
         assertEquals("Message not OK", "Manager", employee.getJobTitle());
     }
 
-}
-public class EmployeeTest {
-
+    @Test
     public void checkEmployeeCreated(){
-        Employee employee = new Employee();
-        employee.setFirstName("TestName");
-        employee.setJobTitle("Manager");
+        Employee employee = new Employee(45, "Manager", "ABC", 50000);
+
         assertEquals("Message", "TestName", employee.getFirstName());
         assertEquals("Message", "Manager", employee.getSecondName());
     }

@@ -2,24 +2,24 @@ package sef.ATestTask.FirstActivity;
 
 public class Employee extends Person {
 
-    private int empId;
-    private String jobTitle;
-    private String companyName;
-    private double salary;
+    public  int empId;
+    public  String jobTitle;
+    public String companyName;
+    public int salary;
 
     //TODO 1 create different constructors
     public Employee (){
-        super();
-        this.empId = 1;
-        this.jobTitle = "Programmer";
-        this.companyName = "Accenture";
-        this.salary = 1000;
+    //        super();
+    //        this.empId = 1;
+            jobTitle = "Programmer";
+    //        this.companyName = "Accenture";
+    //        this.salary = 1000;
 
 
     }
 
     //TODO 2 add getters and setters
-    public Employee (int empId, String jobTitle, String companyName, double salary){
+    public Employee (int empId, String jobTitle, String companyName, int salary){
         super();
         this.empId = empId;
         this.jobTitle = jobTitle;
